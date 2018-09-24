@@ -9,11 +9,11 @@ fast to slow
 
 var ray1 = [1, 2, 3];
 
-ray1.forEach(); //Loop - O(n) -
-
-// .pop()
+ray1.forEach(); //Loop - O(n)
 
 ray1.pop(); // O(1) - constant - no matter what size array, always removes last one in array.
+
+ray1.shift(); // O(n) - linear - Size of array determins how many shifts made.
 
 function strLength(str) {
   let count = 0;
