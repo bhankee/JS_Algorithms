@@ -25,3 +25,21 @@ function strLength(str) {
 
 strLength('hello');
 strLength('Verybigstringhere');
+
+// Optimize uniqueSort method
+const uniqueSort = function(arr) {
+  const cache = {};
+  const result = [];
+  for (let i = 0; i < arr.length; i++) {
+    if (!cache[arr[i]]) {
+      result.push(arr[i]);
+      cache[arr[i]] = true;
+    }
+    console.log('cache: ', cache);
+  }
+  return result.sort((a, b) => a - b);
+};
+
+console.log(uniqueSort([4, 4, 3, 2, 2, 2, 1, 1])); // => [4,3,2,1]
+
+// Memoization - caching a value a function returns
